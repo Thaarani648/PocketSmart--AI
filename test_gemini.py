@@ -1,0 +1,21 @@
+from dotenv import load_dotenv
+import os
+from google import genai
+
+load_dotenv()
+
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+
+
+def ask_gemini(prompt):
+    response = client.models.generate_content(
+        model="gemini-3.5-flash-lite",
+        contents=prompt
+    )
+
+    return response.text
+
+
+result = ask_gemini("Give me one simple budget-saving tip for planning a party.")
+
+print(result)

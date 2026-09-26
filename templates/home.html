@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Budget Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Home Budget Planner</h1>
+
+    <p>Plan your home within your budget.</p>
+
+    <form method="POST" action="/generate-home">
+
+        <label for="budget">Your Budget:</label><br>
+        <input type="number" id="budget" name="budget" placeholder="Enter your budget">
+        <br><br>
+
+        <label for="room">Room Type:</label><br>
+        <select id="room" name="room">
+            <option value="living-room">Living Room</option>
+            <option value="bedroom">Bedroom</option>
+            <option value="kitchen">Kitchen</option>
+            <option value="dining-room">Dining Room</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Plan My Home</button>
+
+    </form>
+
+</body>
+</html>

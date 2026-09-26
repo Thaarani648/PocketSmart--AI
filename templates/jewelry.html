@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Jewelry Planner</h1>
+
+    <p>Find jewelry ideas within your budget.</p>
+
+    <form method="POST" action="/generate-jewelry">
+
+        <label for="budget">Jewelry Budget:</label><br>
+        <input type="number" id="budget" name="budget" placeholder="Enter your budget">
+        <br><br>
+
+        <label for="occasion">Occasion:</label><br>
+        <select id="occasion" name="occasion">
+            <option value="wedding">Wedding</option>
+            <option value="birthday">Birthday</option>
+            <option value="party">Party</option>
+            <option value="daily-wear">Daily Wear</option>
+        </select>
+
+        <br><br>
+
+        <label for="style">Jewelry Style:</label><br>
+        <select id="style" name="style">
+            <option value="traditional">Traditional</option>
+            <option value="modern">Modern</option>
+            <option value="minimal">Minimal</option>
+            <option value="classic">Classic</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Suggest Jewelry</button>
+
+    </form>
+
+</body>
+</html>

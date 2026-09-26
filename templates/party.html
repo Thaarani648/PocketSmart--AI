@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Party Planner</h1>
+
+    <p>Plan your party within your budget.</p>
+
+    <form method="POST" action="/generate-party">
+
+        <label for="budget">Total Budget:</label><br>
+        <input type="number" id="budget" name="budget" placeholder="Enter your budget">
+        <br><br>
+
+        <label for="guests">Number of Guests:</label><br>
+        <input type="number" id="guests" name="guests" placeholder="Enter guest count">
+        <br><br>
+
+        <label for="event">Event Type:</label><br>
+        <select id="event" name="event">
+            <option value="birthday">Birthday</option>
+            <option value="wedding">Wedding</option>
+            <option value="engagement">Engagement</option>
+            <option value="other">Other</option>
+        </select>
+
+        <br><br>
+
+        <label for="venue">Venue:</label><br>
+        <input type="text" id="venue" name="venue" placeholder="Enter venue">
+        <br><br>
+
+        <button type="submit">Plan My Party</button>
+
+    </form>
+
+</body>
+</html>
